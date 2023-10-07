@@ -1,0 +1,19 @@
+{
+    "members": {
+        "amit dhakad": {
+            "name": "Amit Dhakad",
+            "gender": null,
+            "relation": {}
+        },
+        "kk dhakad": {
+            "name": "KK Dhakad",
+            "gender": null,
+            "relation": {
+                "son": [
+                    "amit dhakad"
+                ]
+            }
+        }
+    },
+    "relations": {}
+}
