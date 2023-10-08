@@ -22,8 +22,8 @@ def init_db():
 
 @app.command()
 def add_person(name: str) : 
-    """Adds a person as a member.
-        Example : python -m family-tree "KK Dhakad"
+    """Adds a person as a member with an optional field of gender(recommended).
+        Example : python -m family-tree "KK Dhakad male"
     """
     Member(name)
 
@@ -40,7 +40,7 @@ def connect(sentence: str):
 
 @app.command()
 def count(sentence: str):
-    """Counts the members with the same relation as given. Example : python -m family-tree count "sons of KK Dhakad" """
+    """Counts the members with the same relation as given. Example : python -m family-tree count "sons of KK Dhakad", python -m family-tree count "father of KK Dhakad"  """
     Member.count(sentence)
 
 
