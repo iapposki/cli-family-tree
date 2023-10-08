@@ -28,9 +28,9 @@ class Member:
         name = " ".join(parts[parts.index('of')+1:])
         data = Member.load_data()
         if relation in data['members'][name.lower()]['relation']:
-            print(len(data['members'][name.lower()]['relation'][relation]))
+            print(f'{len(data['members'][name.lower()]['relation'][relation])} {relation} found : {data['members'][name.lower()]['relation'][relation]}')
         else:
-            print(0)
+            print(f'0 {relation} found.')
 
 
     @staticmethod
