@@ -6,6 +6,9 @@ app = typer.Typer()
 
 @app.command()
 def init_db():
+    """Cleans and initializes the database with the proper structure for storing data.
+        Example : python -m family-tree init-db
+    """
     # setup db file
     with open('db.json', 'w+') as file:
         data = {}
@@ -19,19 +22,25 @@ def init_db():
 
 @app.command()
 def add_person(name: str) : 
+    """Adds a person as a member.
+        Example : python -m family-tree "KK Dhakad"
+    """
     Member(name)
 
 
 @app.command()
 def add_relation(relation: str):
+    """Adds relation. Example : python -m family-tree add-relation "son" """
     Member.add_relation(relation)
 
 @app.command()
 def connect(sentence: str):
+    """Adds relation between two members. Example : python -m family-tree connect "Amit Dhakad as son of KK Dhakad" """
     Member.connect(sentence)
 
 @app.command()
 def count(sentence: str):
+    """Counts the members with the same relation as given. Example : python -m family-tree count "sons of KK Dhakad" """
     Member.count(sentence)
 
 
