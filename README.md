@@ -35,4 +35,4 @@ Notes:
 -  DB is stored in root directory in json format.
 -  Code does not support multiple people with same name.
 -  Code provides gender based on relationship using the `connect` command but since only one gender can be determined in this way, it is recommended to give gender while adding as member
--  A premade (with first order relations) family tree is already present in the db with its copy, reference is saved in the root folder.
+-  A premade (with first order relations) family tree is already present in the db with its copy, reference is saved in the root folder.  
